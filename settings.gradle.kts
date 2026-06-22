@@ -19,9 +19,20 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven(url = "https://maven.aliyun.com/nexus/content/repositories/central/")
+        maven(url = "https://maven.aliyun.com/repository/google")
+        maven(url = "https://maven.aliyun.com/repository/jcenter")
+        maven {
+            url = uri("http://172.16.15.158:8081/artifactory/libs-release-local")
+            isAllowInsecureProtocol = true
+            credentials {
+                username = providers.gradleProperty("MAVENUSER").orNull
+                password = providers.gradleProperty("MAVENPASSWORD").orNull
+            }
+        }
+        maven(url = "https://jitpack.io")
     }
 }
 
-rootProject.name = "Demo"
-include(":app")
- 
+        rootProject.name = "Demo"
+        include(":app")

@@ -1,9 +1,10 @@
-package com.example.demo.ui
+package com.example.demo.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.demo.databinding.ItemOilKindBinding
+import com.example.demo.ui.OilKind
 
 class OilKindAdapter : RecyclerView.Adapter<OilKindAdapter.OilKindViewHolder>() {
     private val data = mutableListOf<OilKind>()
@@ -25,6 +26,7 @@ class OilKindAdapter : RecyclerView.Adapter<OilKindAdapter.OilKindViewHolder>() 
         return data.find { it.tag == selectedTag }
     }
 
+    //创建每一行的View
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OilKindViewHolder {
         val binding= ItemOilKindBinding.inflate(
             LayoutInflater.from(parent.context),
@@ -47,7 +49,7 @@ class OilKindAdapter : RecyclerView.Adapter<OilKindAdapter.OilKindViewHolder>() 
         fun bind(item: OilKind){
             binding.tvOilName.text=item.name
             binding.cbSelected.isChecked=(item.tag==selectedTag)
-            binding.root.setOnClickListener{
+            binding.root.setOnClickListener{    //列表项绑定
                 selectedTag=item.tag
                 notifyDataSetChanged()
             }

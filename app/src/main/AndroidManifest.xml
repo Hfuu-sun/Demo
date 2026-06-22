@@ -12,9 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Demo">
         <activity
-            android:name=".ui.OilPreferenceDemoActivity"
+            android:name=".ui.RecyclerViewActivity"
             android:screenOrientation="landscape"
             android:exported="false" />
+        <activity
+            android:name=".ui.OilPreferenceDemoActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".ui.SingleTopActivity"
             android:exported="false"

@@ -3,19 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.OilPreferenceDemoActivity">
-<LinearLayout
+<FrameLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="油品偏好选择"
-        android:textSize="20sp"
-        android:textStyle="bold"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         >
-    </TextView>
+    <tech.jidouauto.component.widgets.toolbar.ToolBarTitleLine
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="油品偏好选择" />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_oil_kind"
         android:layout_width="match_parent"
@@ -28,18 +28,18 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:layout_marginTop="10dp"
-    android:layout_marginHorizontal="10dp"
+    android:layout_marginHorizontal="20dp"
 
     >
-    <Button
+    <tech.jidouauto.component.widgets.basic.Button
         android:id="@+id/btn_confirm"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="确认"
         >
-    </Button>
-    <Button
+    </tech.jidouauto.component.widgets.basic.Button>
+    <tech.jidouauto.component.widgets.basic.Button
         android:id="@+id/btn_skip"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -47,8 +47,16 @@
         android:layout_marginStart="20dp"
         android:text="跳过"
         >
-    </Button>
+    </tech.jidouauto.component.widgets.basic.Button>
 </LinearLayout>
-
-</LinearLayout>
+    </LinearLayout>
+    <tech.jidouauto.component.widgets.basic.ImageView
+        android:id="@+id/iv_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/background_toolbar"
+        android:layout_gravity="center|end"
+        >
+    </tech.jidouauto.component.widgets.basic.ImageView>
+</FrameLayout>
 </layout>
