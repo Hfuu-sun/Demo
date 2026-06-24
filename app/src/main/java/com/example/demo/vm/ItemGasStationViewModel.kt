@@ -1,6 +1,6 @@
 package com.example.demo.vm
 
-import com.example.demo.ui.GasStation
+import com.example.demo.bean.GasStation
 import androidx.databinding.ObservableField
 
 class ItemGasStationViewModel(

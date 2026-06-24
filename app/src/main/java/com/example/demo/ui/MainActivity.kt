@@ -36,6 +36,9 @@ class MainActivity : AppCompatActivity() {
         binding.btnJumpGasList.setOnClickListener {
             startActivity(Intent(this, GasStationListActivity::class.java))
         }
+        binding.btnJumpChargingList.setOnClickListener {
+            startActivity(Intent(this, ChargingStationListActivity::class.java))
+        }
         }
 
     override fun onStart() {

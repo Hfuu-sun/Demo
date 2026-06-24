@@ -1,4 +1,5 @@
-package com.example.demo.ui
+package com.example.demo.bean
+
 data class GasStation(
    val stationName: String,
    val address: String,

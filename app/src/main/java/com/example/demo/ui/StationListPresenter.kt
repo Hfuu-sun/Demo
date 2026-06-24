@@ -1,7 +1,10 @@
 package com.example.demo.ui
 
+import com.example.demo.bean.GasStation
+import com.example.demo.repository.FakeGasStationRepository
+
 class StationListPresenter(
-    private val  repository: FakeGasStationRepository= FakeGasStationRepository()
+    private val  repository: FakeGasStationRepository = FakeGasStationRepository()
 )
 {
     fun getStationList(responseResultBlock: (PresenterResult<List<GasStation>>)-> Unit){

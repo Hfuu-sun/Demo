@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="item"
+            type="com.example.demo.bean.StationInfo" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tv_charging_station_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.stationName}"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/tv_charging_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.address}"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/tv_charging_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{String.valueOf(item.distance)+"m"}'
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/tv_charging_gun_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"快充"+String.valueOf(item.fastGunFreeNum)+"/"+String.valueOf(item.fastGunNum)+ "慢充"+String.valueOf(item.lowGunFreeNum)+"/"+String.valueOf(item.lowGunNum)}'
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/tv_charging_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"当前价格"+item.currTotalFee}'
+            >
+        </TextView>
+    </LinearLayout>
+
+</layout>

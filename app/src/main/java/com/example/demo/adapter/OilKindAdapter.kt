@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.demo.databinding.ItemOilKindBinding
-import com.example.demo.ui.OilKind
+import com.example.demo.bean.OilKind
 
 class OilKindAdapter : RecyclerView.Adapter<OilKindAdapter.OilKindViewHolder>() {
     private val data = mutableListOf<OilKind>()

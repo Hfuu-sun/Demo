@@ -4,6 +4,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.demo.adapter.OilKindAdapter
 import com.example.demo.R
+import com.example.demo.bean.OilKind
 import com.example.demo.databinding.ActivityOilPreferencerDemoBinding
 import com.example.demo.ui.base.BaseActivity
 

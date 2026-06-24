@@ -1,4 +1,7 @@
-package com.example.demo.ui
+package com.example.demo.repository
+
+import com.example.demo.bean.GasStation
+
 class  FakeGasStationRepository{
     fun getStationList(): List<GasStation>{
         return listOf(

@@ -1,4 +1,4 @@
-package com.example.demo.ui
+package com.example.demo.bean
 
 data class OilKind(
     val tag: Int,

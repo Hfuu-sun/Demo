@@ -6,7 +6,7 @@
             type="com.example.demo.vm.ItemGasStationViewModel"/>
         <variable
             name="data"
-            type="com.example.demo.ui.GasStation" />
+            type="com.example.demo.bean.GasStation" />
     </data>
     <LinearLayout
         android:layout_marginVertical="10dp"

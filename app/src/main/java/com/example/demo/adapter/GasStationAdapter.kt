@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.demo.databinding.ItemGasStationBinding
-import com.example.demo.ui.GasStation
+import com.example.demo.bean.GasStation
 import com.example.demo.vm.ItemGasStationViewModel
 
 class GasStationAdapter: RecyclerView.Adapter<GasStationAdapter.GasStationViewHolder>() {
