@@ -3,9 +3,9 @@ package com.example.demo.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewbinding.ViewBinding
 import com.example.demo.databinding.ItemGasStationBinding
 import com.example.demo.ui.GasStation
+import com.example.demo.vm.ItemGasStationViewModel
 
 class GasStationAdapter: RecyclerView.Adapter<GasStationAdapter.GasStationViewHolder>() {
     private val data = mutableListOf<GasStation>()
@@ -28,21 +28,20 @@ class GasStationAdapter: RecyclerView.Adapter<GasStationAdapter.GasStationViewHo
         holder: GasStationViewHolder,
         position: Int
     ) {
-        holder.bind((data[position]))
+        holder.bind(data[position],position)
     }
 
 
     override fun getItemCount(): Int =data.size
 
+
     inner class GasStationViewHolder(
         private val binding: ItemGasStationBinding
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: GasStation) {
-            binding.tvStationName.text = item.stationName
-            binding.tvAddress.text = item.address
-            binding.tvOilNo.text = item.oilNo
-            binding.tvPrice.text = item.price
-            binding.tvDistance.text = item.distance
+        fun bind(item: GasStation, position: Int) {
+            binding.data=item
+            binding.viewModel= ItemGasStationViewModel(item, position +1)
+            binding.executePendingBindings()
         }
     }
 }

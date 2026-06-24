@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.demo.vm.ItemGasStationViewModel"/>
+        <variable
+            name="data"
+            type="com.example.demo.ui.GasStation" />
+    </data>
+    <LinearLayout
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+    <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@{viewModel.positionText}"
+        android:layout_marginHorizontal="10dp"
+       >
+   </TextView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -11,7 +31,7 @@
             android:id="@+id/tv_station_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="中石化望京站"
+            android:text="@{viewModel.stationName}"
             android:textSize="16sp">
         </TextView>
         <TextView
@@ -19,7 +39,7 @@
             android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="朝阳区望京西路12号"
+            android:text="@{viewModel.address}"
             android:textSize="16sp">
         </TextView>
         <TextView
@@ -27,7 +47,7 @@
             android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="92#"
+            android:text="@{viewModel.oilNo}"
             android:textSize="16sp">
         </TextView>
         <TextView
@@ -35,7 +55,7 @@
             android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="7.45/L"
+            android:text="@{viewModel.price}"
             android:textSize="16sp">
         </TextView>
         <TextView
@@ -43,8 +63,9 @@
             android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1.2km"
+            android:text="@{viewModel.distance}"
             android:textSize="16sp">
         </TextView>
+    </LinearLayout>
     </LinearLayout>
 </layout>

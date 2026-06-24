@@ -2,11 +2,7 @@ package com.example.demo.ui
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.demo.R
 import com.example.demo.databinding.ActivityMainBinding
 import com.example.demo.util.LogUtil
 
@@ -36,6 +32,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnJumpGas.setOnClickListener {
             startActivity(Intent(this, OilPreferenceDemoActivity::class.java))
+        }
+        binding.btnJumpGasList.setOnClickListener {
+            startActivity(Intent(this, GasStationListActivity::class.java))
         }
         }
 
