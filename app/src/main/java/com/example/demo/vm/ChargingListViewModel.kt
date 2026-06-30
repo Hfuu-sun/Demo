@@ -19,11 +19,11 @@ class ChargingListViewModel: ViewModel()
             loading.value=true
             try {
                 val response=repository.getStationList()
-                if (response.code==200&& response.data?.list!=null){
+                if (response.isSuccess()&& response.data?.list!=null){
                     stations.value=response.data.list
                 }
                 else{
-                    error.value=response.msg ?:"充电站列表加载失败"
+                    error.value=response.tip()
                 }
             }
             catch (throwable: Throwable){

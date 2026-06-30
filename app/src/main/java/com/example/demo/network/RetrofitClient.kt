@@ -22,11 +22,11 @@ object RetrofitClient{   //全局单例
         .writeTimeout(30, java.util.concurrent.TimeUnit.SECONDS)
         .build()
     
-    val chargingApi: ChargingApi by lazy {
+    val chargingApi: ChargingApi by lazy {  //用到的时候才初始化，不用就不创建，节省资源、避免空指针、提升启动速度。
         Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(okHttpClient)
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create())   //Gson转换
             .build()
             .create(ChargingApi::class.java)
     }
